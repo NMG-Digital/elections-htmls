@@ -1,0 +1,48 @@
+.footer{
+    background: $clr-black;
+    border-top: 10px solid #A5A7A9;
+
+    &__top{
+        &__container{
+            margin: 0 auto;
+            max-width: 1280px;
+        }
+
+        &__content{
+            display: grid;
+            grid-template-columns: 300px 1fr 2fr;
+            padding: 40px 0;
+        }
+    }
+
+    &__copy{
+        border-top: 1px solid rgba(255, 255, 255, 0.13);
+        padding: 25px 0;
+        text-align: center;
+        color: $clr-white;
+    }
+}
+
+.footer{
+    &__list{
+        list-style: none;
+    }
+
+    &__item{
+        margin-bottom: 10px;
+    }
+
+    &__link{
+        display: inline-block;
+        color: $clr-white;
+        font-size: 16px;
+        border-color: transparent;
+        border-bottom-width: 2px;
+        border-style: solid;
+
+        &:hover{
+            color: $clr-white;
+            border-color: $clr-white;
+        }
+    }
+}

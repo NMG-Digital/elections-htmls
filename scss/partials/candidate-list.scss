@@ -1,0 +1,291 @@
+.topstrip{
+    background: $clr-main;
+
+    &__content{
+        text-align: center;
+    }
+
+    &__title{
+        color: $clr-white;
+        font-size: 30px;
+        padding: 15px 50px;
+        display: inline-block;
+        border-left: 1px solid rgba(255, 255, 255, 0.1);
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+    }
+}
+
+.tabulations{
+    &__item{
+        margin-bottom: 40px;
+    }
+    &__boxy{
+        &__title{
+            h2{
+                font-size: 22px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    &__top{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid $clr-gray-1;
+        margin-bottom: 30px;
+        padding-bottom: 10px;
+
+        &__title{
+            h1{
+                font-size: 24px;
+                font-weight: 600;
+            }
+        }
+    }
+
+    &__loadmore{
+        margin-bottom: 60px;
+        a{
+            display: block;
+            text-align: center;
+            font-weight: 700;
+            font-size: 16px;
+            color: $clr-main;
+            background: rgba(24, 91, 168, 0.03);
+            border: 1px solid $clr-main;
+            padding: 20px 0;
+        }
+    }
+
+    &__county{
+        &__race{
+            margin-top: 50px;
+            margin-bottom: 100px;
+        }
+    }
+}
+
+
+.results{
+    &__tabulation{
+        border: 1px solid rgba($color: #000000, $alpha: 0.1);
+
+        &__winner{
+            background: rgba(0,0,0,0.1);
+        }
+
+        &__table{
+            width: 100%;
+        }
+
+        &__th{
+            padding: 20px 20px 10px;
+            text-align: left;
+        }
+
+        &__td,
+        &__th{
+            border-bottom: 1px solid rgba($color: #000000, $alpha: 0.1);;
+        }
+
+        &__td{
+            padding: 20px 20px;
+
+            &.uda-cadidate,
+            &.jubilee-cadidate,
+            &.odm-candidate,
+            &.wiper-candidate,
+            &.anc-candidate,
+            &.narc-candidate,
+            &.dapk-candidate,
+            &.kanu-candidate{
+                position: relative;
+
+                &::before{
+                    content: "";
+                    position: absolute;
+                    left: -2px;
+                    width: 4px;
+                    top: -2px;
+                    bottom: -2px;
+                }
+            }
+
+            &.uda-cadidate{
+                &::before{
+                    background: $clr-uda;
+                }
+            }
+
+            &.jubilee-cadidate{
+                &::before{
+                    background: $clr-jubilee;
+                }
+            }
+            &.odm-candidate{
+                &::before{
+                    background: $clr-odm;
+                }
+            }
+            &.wiper-candidate{
+                &::before{
+                    background: $clr-wiper;
+                }
+            }
+            &.anc-candidate{
+                &::before{
+                    background: $clr-anc;
+                }
+            }
+            &.narc-candidate{
+                &::before{
+                    background: $clr-narc;
+                }
+            }
+            &.dapk-candidate{
+                &::before{
+                    background: $clr-dapk;
+                }
+            }
+            &.kanu-candidate{
+                &::before{
+                    background: $clr-kanu;
+                }
+            }
+        }
+
+        &__title{
+            font-size: 16px;
+            font-weight: 500;
+            color: rgba(30, 34, 39, 0.6);
+        }
+
+        &__h4{
+            position: relative;
+            left: 55px;
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        &__profile{
+            position: relative;
+        }
+
+        &__image{
+            position: absolute;
+            top: -8px;
+            width: 40px;
+            height: 40px;
+            border-radius: 40px;
+            background: rgba(0,0,0,0.1);
+        }
+
+        &__link{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px 0;
+
+            a{
+                font-size: 18px;
+                color: $clr-main;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+
+.winner-uda-cadidate{
+    background: $clr-uda !important;
+}
+
+.winner-cadidate{
+    padding: 20px 30px;
+
+    &__content{
+        display: flex;
+    }
+
+    &__profile{
+        width: 80px;
+        height: 80px;
+    }
+
+    &__details{
+        margin-left: 20px;
+
+        h3{
+            line-height: 1.4;
+        }
+    }
+}
+
+.winner-meta{
+    &__text{
+        font-weight: 600;
+    }
+}
+
+.county{
+    &__race{
+        &__table{
+            width: 100%;
+        }
+
+        &__td{
+            padding: 15px 20px 15px 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        &__link{
+            a{
+                color: $clr-black;
+                display: inline-block;
+                font-size: 16px;
+                position: relative;
+                font-weight: 500;
+                border-bottom-width: 2px;
+                border-bottom-style: solid;
+                border-bottom-color: transparent;
+
+                &:hover{
+                    color: $clr-main;
+                    border-bottom-color: $clr-main;
+                }
+
+                &::after{
+                    content: "\e904";
+                    position: absolute;
+                    top: 8px;
+                    margin-left: 5px;
+                    font-size: 11px;
+                    color: rgba(30, 34, 39, 0.4);
+                    font-family: 'icomoon' !important;
+                    speak: never;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-variant: normal;
+                    text-transform: none;
+                    line-height: 1;
+                    
+                }
+            }
+        }
+    }
+}
+
+.president{
+    &__boxy{
+        .candidate{
+            padding: 20px 30px;
+            border: 1px solid $clr-gray-1;
+            margin-bottom: 30px;
+
+            &__content{
+                color: $clr-black;
+            }
+        }
+    }
+}
