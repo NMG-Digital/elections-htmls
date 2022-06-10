@@ -654,6 +654,58 @@ textarea {
   font-size: 16px;
 }
 
+.flex-1 {
+  flex: 1 !important;
+}
+
+.flex-2 {
+  flex: 2 !important;
+}
+
+.flex-3 {
+  flex: 3 !important;
+}
+
+.select {
+  border: 1px solid #ccc;
+  padding: 8px 45px 10px 20px;
+  border-radius: 4px;
+  color: #606060;
+  appearance: none;
+  position: relative;
+}
+.select::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: red;
+  right: 10px;
+  top: 10px;
+}
+
+.select-container {
+  position: relative;
+}
+.select-container::before {
+  content: "";
+  position: absolute;
+  font-size: 10px;
+  right: 15px;
+  top: 17px;
+  z-index: 999;
+  color: #606060;
+  font-family: "icomoon" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 .main-content__container {
   margin: 0 auto;
   max-width: 1280px;
@@ -861,10 +913,10 @@ textarea {
 .results__tabulation__td {
   padding: 20px 20px;
 }
-.results__tabulation__td.uda-cadidate, .results__tabulation__td.jubilee-cadidate, .results__tabulation__td.odm-candidate, .results__tabulation__td.wiper-candidate, .results__tabulation__td.anc-candidate, .results__tabulation__td.narc-candidate, .results__tabulation__td.dapk-candidate, .results__tabulation__td.kanu-candidate {
+.results__tabulation__td.azimio-candidate, .results__tabulation__td.uda-candidate, .results__tabulation__td.jubilee-cadidate, .results__tabulation__td.odm-candidate, .results__tabulation__td.wiper-candidate, .results__tabulation__td.anc-candidate, .results__tabulation__td.narc-candidate, .results__tabulation__td.dapk-candidate, .results__tabulation__td.kanu-candidate, .results__tabulation__td.agano-candidate, .results__tabulation__td.roots-candidate {
   position: relative;
 }
-.results__tabulation__td.uda-cadidate::before, .results__tabulation__td.jubilee-cadidate::before, .results__tabulation__td.odm-candidate::before, .results__tabulation__td.wiper-candidate::before, .results__tabulation__td.anc-candidate::before, .results__tabulation__td.narc-candidate::before, .results__tabulation__td.dapk-candidate::before, .results__tabulation__td.kanu-candidate::before {
+.results__tabulation__td.azimio-candidate::before, .results__tabulation__td.uda-candidate::before, .results__tabulation__td.jubilee-cadidate::before, .results__tabulation__td.odm-candidate::before, .results__tabulation__td.wiper-candidate::before, .results__tabulation__td.anc-candidate::before, .results__tabulation__td.narc-candidate::before, .results__tabulation__td.dapk-candidate::before, .results__tabulation__td.kanu-candidate::before, .results__tabulation__td.agano-candidate::before, .results__tabulation__td.roots-candidate::before {
   content: "";
   position: absolute;
   left: -2px;
@@ -872,7 +924,10 @@ textarea {
   top: -2px;
   bottom: -2px;
 }
-.results__tabulation__td.uda-cadidate::before {
+.results__tabulation__td.azimio-candidate::before {
+  background: #0B2357;
+}
+.results__tabulation__td.uda-candidate::before {
   background: #F1D100;
 }
 .results__tabulation__td.jubilee-cadidate::before {
@@ -896,6 +951,12 @@ textarea {
 .results__tabulation__td.kanu-candidate::before {
   background: #F50518;
 }
+.results__tabulation__td.agano-candidate::before {
+  background: #7B5BA4;
+}
+.results__tabulation__td.roots-candidate::before {
+  background: #EB3C46;
+}
 .results__tabulation__title {
   font-size: 16px;
   font-weight: 500;
@@ -917,6 +978,7 @@ textarea {
   height: 40px;
   border-radius: 40px;
   background: rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
 .results__tabulation__link {
   display: flex;
@@ -993,12 +1055,42 @@ textarea {
 }
 
 .president__boxy .candidate {
-  padding: 20px 30px;
+  padding: 30px;
   border: 1px solid #E7E7E7;
   margin-bottom: 30px;
 }
 .president__boxy .candidate__content {
   color: #1E2227;
+}
+
+.county__won__content {
+  width: 150px;
+  background: rgba(196, 196, 196, 0.07);
+  border: 1px solid rgba(30, 34, 39, 0.2);
+  border-radius: 3px;
+  text-align: center;
+  padding: 20px 0;
+}
+.county__won__number {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 40px;
+}
+.county__won__text {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.candidate-azimio .image-container {
+  outline-color: #0B2357;
+}
+
+.candidate-uda .image-container {
+  outline-color: #F1D100;
+}
+
+.candidate-safina .image-container {
+  outline-color: #0AA758;
 }
 
 .footer {

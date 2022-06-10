@@ -92,14 +92,17 @@
         &__td{
             padding: 20px 20px;
 
-            &.uda-cadidate,
+            &.azimio-candidate,
+            &.uda-candidate,
             &.jubilee-cadidate,
             &.odm-candidate,
             &.wiper-candidate,
             &.anc-candidate,
             &.narc-candidate,
             &.dapk-candidate,
-            &.kanu-candidate{
+            &.kanu-candidate,
+            &.agano-candidate,
+            &.roots-candidate{
                 position: relative;
 
                 &::before{
@@ -112,7 +115,13 @@
                 }
             }
 
-            &.uda-cadidate{
+            &.azimio-candidate{
+                &::before{
+                    background: $clr-azimio;
+                }
+            }
+
+            &.uda-candidate{
                 &::before{
                     background: $clr-uda;
                 }
@@ -153,6 +162,16 @@
                     background: $clr-kanu;
                 }
             }
+            &.agano-candidate{
+                &::before{
+                    background: $clr-agano;
+                }
+            }
+            &.roots-candidate{
+                &::before{
+                    background: $clr-roots;
+                }
+            }
         }
 
         &__title{
@@ -179,6 +198,7 @@
             height: 40px;
             border-radius: 40px;
             background: rgba(0,0,0,0.1);
+            overflow: hidden;
         }
 
         &__link{
@@ -279,7 +299,7 @@
 .president{
     &__boxy{
         .candidate{
-            padding: 20px 30px;
+            padding: 30px;
             border: 1px solid $clr-gray-1;
             margin-bottom: 30px;
 
@@ -287,5 +307,47 @@
                 color: $clr-black;
             }
         }
+    }
+}
+
+.county{
+    &__won{
+        &__content{
+            width: 150px;
+            background: rgba(196, 196, 196, 0.07);
+            border: 1px solid rgba(30, 34, 39, 0.2);
+            border-radius: 3px;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        &__number{
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 40px;
+        }
+
+        &__text{
+            font-size: 14px;
+            font-weight: 500;
+        }
+    }
+}
+
+.candidate-azimio{
+    .image-container{
+        outline-color: $clr-azimio;
+    }
+}
+
+.candidate-uda{
+    .image-container{
+        outline-color: $clr-uda;
+    }
+}
+
+.candidate-safina{
+    .image-container{
+        outline-color: $clr-safina;
     }
 }
